@@ -1,0 +1,21 @@
+pipeline{
+    agent any{
+        stages{
+            stage('Build and test'){
+                steps{
+                    echo "hello"
+                }
+            }
+            stage('Generate'){
+                steps{
+                    echo "success"
+                }
+            }
+        }
+        post{
+            success{
+                echo "s"
+            }
+        }
+    }
+}
